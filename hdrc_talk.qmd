@@ -1,0 +1,89 @@
+---
+title: "That's not my population! Its denominator is not census based."
+author: "Frank Popham"
+date: 10/07/2025
+date-format: "D MMM YYYY"
+format: revealjs
+title-slide-attributes:
+    data-background-image: https://upload.wikimedia.org/wikipedia/en/6/61/That%27s_Not_My_Puppy_book_cover.jpg
+    data-background-size: contain
+    data-background-opacity: "0.2"
+---
+
+------------------------------------------------------------------------
+
+![](images/clipboard-3064433903.png)
+
+## NRS - How are population estimates calculated?
+
+-   [Population estimates are based on the census and are updated each year to account for population change from 1 July to 30 June. They are based on the usually resident population which covers people living in Scotland for a period of at least 12 months, whatever their nationality.](https://www.nrscotland.gov.uk/publications/mid-2024-population-estimates/)
+
+## 
+
+::: equation
+$${\frac{\text{Events}}{\text{Population}}}$$
+:::
+
+-   Move from unlinked to linked so sure same population above and below the division line
+
+::: equation
+$$\boxed{\frac{\text{Events}}{\text{Population}}}$$
+:::
+
+-   CHI to the rescue ...
+
+## PHS - Data dictionary
+
+-   [The Community Health Index (CHI) is a population register, which is used in Scotland for health care purposes. The CHI number uniquely identifies a person on the index.](https://publichealthscotland.scot/resources-and-tools/health-intelligence-and-data-management/national-data-catalogue/data-dictionary/search-the-data-dictionary/chi-number/)
+
+## Our use of CHI
+
+-   After DPIA etc. receive monthly abstract for people with NHS Grampian address
+-   Extract living population
+-   Update monthly: births, deaths, entries and exit
+-   Effectively a cohort starting March 2024
+-   Pseudo anonymised
+-   Link to health records that usually have CHI
+
+## CHI versus NRS
+
+![](images/clipboard-3222108709.png)
+
+## Unique Property Reference Number - UK Government
+
+-   [UPRNs are the unique identifiers for every addressable location in Great Britain](https://www.gov.uk/government/publications/open-standards-for-government/identifying-property-and-street-information)
+-   CHI register includes UPRNs but
+-   Addresses messy, we worked to increase coverage
+-   Housing and health project around 90% have UPRN
+-   From UPRN can derive households
+-   Households updated daily
+
+## Population platform
+
+-   A documented updated resource rather than just data
+
+-   Can be pseudo anonymised linked to modules:
+
+    -   Community prescriptions
+
+    -   NHS admissions and ICD codes
+
+    -   Out of hours GP
+
+    -   Operations
+
+    -   Waitings lists
+
+-   External data
+
+## That's all
+
+-   [My background](www.frankpopham.com)
+
+-   frank.popham\@nhs.scot
+
+-   [R](https://www.r-project.org/), [RStudio](https://posit.co/download/rstudio-desktop/), [Quarto](https://quarto.org/), [DuckDB and Ducklake](https://duckdb.org/)
+
+-   Jessica Butler and Corri Black
+
+-   [This talk](https://github.com/frank-stat/hdrc_talk)
